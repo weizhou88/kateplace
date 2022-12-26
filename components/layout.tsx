@@ -15,7 +15,7 @@ export default function layout({ children }) {
       <div className= "container-fluid">
         <nav className= {style.nav}>
           <div className= {style.logo}>
-            <a href="./"><img src="https://raw.githubusercontent.com/weizhou88/kateplace-asset/master/logo.png" /></a>
+            <Link href={"./"}><img src="https://raw.githubusercontent.com/weizhou88/kateplace-asset/master/logo.png" /></Link>
           </div>
           <div id="mainListDiv" className={style.main_list}>
             <ul className={style.navlinks}>
