@@ -198,7 +198,7 @@ export default class ArtsService {
 
   constructor() { }
 
-  getArts(artType: string, age: number = 8): Array<{id: number, desc: string}>{
+  getArts(artType: string, age: string = '8'): Array<{id: number, desc: string}>{
     return eval("this." +artType + "_" + age);
   }
 }

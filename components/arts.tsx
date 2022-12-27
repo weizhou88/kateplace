@@ -1,9 +1,13 @@
 import style from '../styles/arts.module.css'
 import ArtsService from '../services/artservice'
+import AppContext from '../AppContext';
+import { useContext } from 'react'
 
-export default function arts({ type, age }) {
-  const artservice = new ArtsService();
-  const arts = artservice.getArts(type, age);
+export default function arts({ type }) {
+  const artservice = new ArtsService();  
+  const value = useContext(AppContext)
+  let ageSelected = value?.state.ageSelected;
+  const arts = artservice.getArts(type, ageSelected);
 
   return (
     <div id="drawing-container" className="pt-5">
@@ -11,7 +15,7 @@ export default function arts({ type, age }) {
         {arts.map((art=>{
           var baseUrl = "https://raw.githubusercontent.com/weizhou88/kateplace-asset/master/arts/"
           var ext = type==='animations'?'gif':'png';
-          var imageUrl = baseUrl + `${type}/a${age}/${type}${art.id}-512.${ext}`;
+          var imageUrl = baseUrl + `${type}/a${ageSelected}/${type}${art.id}-512.${ext}`;
           console.log(imageUrl);
           return (
             <div className={`${style.card} mb-5`}>

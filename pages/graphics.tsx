@@ -5,7 +5,7 @@ export default function Graphics() {
   return (
     <div>
       <Layout>
-        <Arts type="graphics" age="8" />
+        <Arts type="graphics" />
       </Layout>
     </div>
   );
