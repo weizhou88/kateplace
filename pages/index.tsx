@@ -1,6 +1,6 @@
 import style from '../styles/index.module.css'
 import Layout from "../components/layout"
-import Link from 'next/link'
+import { Dropdown } from 'react-bootstrap'
 
 export default function Index() {
   return (
@@ -13,25 +13,19 @@ export default function Index() {
           </div>
 
           <div className={style.intro_container}>
-            <h3 className={style.intro_head} id={style.intro_head_big}>
+            <h3 className={style.intro_head}>
               You are in Kate place!
             </h3>
-            <p className={style.intro_detail} id={style.intro_detail_big}>
-              Click the button to check out my artworks!
-            </p>
-            <h3 className={style.intro_head} id={style.intro_head_small}>
-              You are in Kate place!
-            </h3>
-            <p className={style.intro_detail} id={style.intro_detail_small}>
-              Click the button to check out my artworks.
-            </p>
-            <Link href={'https://www.google.com'} className="btn btn-primary">
-              MY DRAWINGS
-            </Link>
-            <a href="./drawings">
-              MY DRAWINGS a link
-            </a>
-          </div>   
+            <label className={style.intro_detail}>Explore my artworks at age:</label>
+            <select name="age" id="age">
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <Dropdown.Menu>
+              <Dropdown.Item>8</Dropdown.Item>
+            </Dropdown.Menu>
+          </div>             
         </div>
       </Layout>
     </div>

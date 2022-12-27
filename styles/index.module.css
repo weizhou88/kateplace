@@ -47,12 +47,12 @@
   animation-direction: alternate;
 }
 
-.jumbotron .container {
+/* .jumbotron .container {
   z-index: 2;
   position: relative;
   top: 40vh;
   text-align: center;
-}
+} */
 
 img.blur {
   -webkit-filter: blur(3px);
@@ -67,6 +67,7 @@ img.blur {
   height: 100vh;
   text-align: center;
   justify-content: center;
+  z-index: 3;
   /* font-family:courier,arial,helvetica; */
 }
 
@@ -80,24 +81,13 @@ img.blur {
   font-size: 25px;
 }
 
-#intro_head_small, #intro_detail_small {
-  display: none;
-}
-
-@media (max-width: 950px) {
-  #intro_head_small {
-    display: block;
+@media (max-width: 700px) {
+  .intro_head {
     font-size: 30px;
   }
 
-  #intro_detail_small {
-    display: block;
+  .intro_detail {
     font-size: 15px;
-
   }
-
-  #intro_head_big, #intro_detail_big {
-    display: none;
-  }  
 }
 
