@@ -1,14 +1,24 @@
-import { useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import AppContext from '../AppContext'
 import style from '../styles/jumbotron.module.css'
 
 export default function jumbotron() {
   const value = useContext(AppContext)
+
+  // useEffect(() => {
+  //   if(value){
+  //     sessionStorage.setItem('age', value.state.ageSelected)
+  //   }
+  //   console.log(value?.state.ageSelected)    
+  // }, [])
+
   const ageSelected = (event) =>{
-    console.log(value?.state.ageSelected);
-    let setAgeSelected = value?.setAgeSelected;
-    console.log(setAgeSelected);
-    setAgeSelected?(event.target.value, ()=>{console.log(value?.state.ageSelected)}):()=>{};
+    sessionStorage.setItem('age', event.target.value)
+    // console.log(value?.state.ageSelected);
+    // value?.setAgeSelected?(event.target.value):()=>{};
+    // if(value){
+    //   value.state.ageSelected = event.target.value;
+    // }
   }
   
   return (

@@ -5,8 +5,8 @@ import { useContext } from 'react'
 
 export default function arts({ type }) {
   const artservice = new ArtsService();  
-  const value = useContext(AppContext)
-  let ageSelected = value?.state.ageSelected;
+  // const value = useContext(AppContext);
+  let ageSelected = sessionStorage.getItem('age');
   const arts = artservice.getArts(type, ageSelected);
 
   return (

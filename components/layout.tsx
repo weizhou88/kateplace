@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import style from '../styles/layout.module.css'
+import Navbanner from './navbanner'
 
 export default function layout({ children }) {
   return (
@@ -13,7 +14,8 @@ export default function layout({ children }) {
       </Head>
 
       <div className= "container-fluid">
-        <nav className= {style.nav}>
+        <Navbanner></Navbanner>
+        {/* <nav className= {style.nav}>
           <div className= {style.logo}>
             <Link href={"./"}><img src="https://raw.githubusercontent.com/weizhou88/kateplace-asset/master/logo.png" /></Link>
           </div>
@@ -25,7 +27,8 @@ export default function layout({ children }) {
               <li><Link href={'./animations'} className={style.link}>My animations</Link></li>
             </ul> 
           </div>
-        </nav>
+        </nav> */}
+
         {children}
       </div>
     </div>
