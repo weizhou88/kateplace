@@ -12,7 +12,7 @@
 
 .nav {
   height: 70px;
-  background-color: rgb(130, 118, 187);
+  /* background-color: rgb(130, 118, 187); */
 }
 
 @media (min-width: 768px) {
@@ -45,24 +45,43 @@
   padding: 0;
 }
 
-.nav div.main_list .link {
+.link {
   width: auto;
   height: 70px;
   padding-right: 3rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  line-height: 65px;
+  /* color: rgb(255, 255, 255); */
+  line-height: 70px;
   font-size: 1.4rem;
-  padding: 7px 13px;
+  padding: 7px 7px;
   border-radius: 3px;
 }
 
-.nav div.main_list ul li a:hover {
+.link:hover {
   background-color: rgb(246, 156, 156);
   transition: 0.5s;
 }
-.nav div.main_list ul li a.active {
+
+.link.active {
   background-color: lightcoral;
+}
+
+.ageLabel {
+  width: auto;
+  height: 70px;
+  padding-right: 3rem;
+  line-height: 70px;
+  font-size: 1.4rem;
+  padding: 7px 13px;
+}
+
+.ageSelector {
+  width: auto;
+  height: 70px;
+  padding-right: 3rem;
+  line-height: 70px;
+  font-size: 1.4rem;
+  padding: 7px 13px;
 }
 
 .nav .nav-icon {

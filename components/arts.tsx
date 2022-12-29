@@ -1,11 +1,8 @@
 import style from '../styles/arts.module.css'
 import ArtsService from '../services/artservice'
-import AppContext from '../AppContext';
-import { useContext } from 'react'
 
 export default function arts({ type }) {
   const artservice = new ArtsService();  
-  // const value = useContext(AppContext);
   let ageSelected = sessionStorage.getItem('age');
   const arts = artservice.getArts(type, ageSelected);
 

@@ -1,26 +1,7 @@
-import { useEffect, useContext } from 'react'
-import AppContext from '../AppContext'
 import style from '../styles/jumbotron.module.css'
 
 export default function jumbotron() {
-  const value = useContext(AppContext)
 
-  // useEffect(() => {
-  //   if(value){
-  //     sessionStorage.setItem('age', value.state.ageSelected)
-  //   }
-  //   console.log(value?.state.ageSelected)    
-  // }, [])
-
-  const ageSelected = (event) =>{
-    sessionStorage.setItem('age', event.target.value)
-    // console.log(value?.state.ageSelected);
-    // value?.setAgeSelected?(event.target.value):()=>{};
-    // if(value){
-    //   value.state.ageSelected = event.target.value;
-    // }
-  }
-  
   return (
     <div className= {style.jumbotron}>
       <div className= {style.jumbotron_background}>
@@ -32,12 +13,7 @@ export default function jumbotron() {
         <h3 className={style.intro_head}>
           You are in Kate place!
         </h3>
-        <label className={style.intro_detail}>Explore my artworks at age:</label>
-        <select name="age" id="age" onChange={ageSelected}>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+        <label className={style.intro_detail}>Explore my artworks at all ages.</label>
       </div>             
     </div>
   )
