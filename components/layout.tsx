@@ -1,9 +1,13 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import style from '../styles/layout.module.css'
 import Navbanner from './navbanner'
+import { useEffect } from 'react'
 
 export default function layout({ children }) {
+  useEffect(() => {
+    // document.documentElement.style.setProperty(
+    //   '--nav-height', `${document.getElementById("navbar")?.offsetHeight}px`);
+  })
+  
   return (
     <div>
       <Head>
@@ -15,20 +19,6 @@ export default function layout({ children }) {
 
       <div className= "container-fluid">
         <Navbanner></Navbanner>
-        {/* <nav className= {style.nav}>
-          <div className= {style.logo}>
-            <Link href={"./"}><img src="https://raw.githubusercontent.com/weizhou88/kateplace-asset/master/logo.png" /></Link>
-          </div>
-          <div id="mainListDiv" className={style.main_list}>
-            <ul className={style.navlinks}>
-              <li><Link href={'./drawings'} className={style.link}>My drawings</Link></li>
-              <li><Link href={'./paintings'} className={style.link}>My paintings</Link></li>
-              <li><Link href={'./graphics'} className={style.link}>My graphics</Link></li>
-              <li><Link href={'./animations'} className={style.link}>My animations</Link></li>
-            </ul> 
-          </div>
-        </nav> */}
-
         {children}
       </div>
     </div>
