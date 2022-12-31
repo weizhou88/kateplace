@@ -61,13 +61,19 @@ export default class ArtsService {
     {id: 57, desc: 'flower dress'},
     {id: 58, desc: 'a dalmatian as a human'},
     {id: 59, desc: 'a old car'},
-    {id: 60, desc: 'dogs'}
+    {id: 60, desc: 'Dogs'},
+    {id: 61, desc: 'Cool Girl'},
+    {id: 62, desc: 'Queen'},
+    {id: 63, desc: 'Fire Girl'},
+    {id: 64, desc: 'Fasion Girl'},
+    {id: 65, desc: 'Mint Girl'},
+    {id: 66, desc: 'Circles'}
   ];
   drawings_9 = [
     {id: 0, desc: '90% realism'},
     {id: 1, desc: 'a random cover I made called "Just the Same"'},
     {id: 2, desc: 'stars'},
-    {id: 3, desc: 'she a shy girl'},
+    {id: 3, desc: 'bunny girl'},
     {id: 4, desc: 'crying'},
     {id: 5, desc: 'plants and butterflys'},
     {id: 6, desc: 'prinesess'},
@@ -77,15 +83,35 @@ export default class ArtsService {
     {id: 10, desc: 'deer girl with plants'},
     {id: 11, desc: 'Eri from MHA'},
     {id: 12, desc: 'Melody'},
-    {id: 13, desc: 'CHEAK me out'},
+    {id: 13, desc: 'A Girl'},
     {id: 14, desc: 'an apple tree'},
     {id: 15, desc: 'secret garden'},
-    {id: 16, desc: 'eyes! Everywere'}
+    {id: 16, desc: 'emotions'}
+  ];
+  drawings_10 = [
+    {id: 0, desc: 'Pretty Flowers'},
+    {id: 1, desc: 'Up-beat Flowers'},
+    {id: 2, desc: 'Staring of to the Distance'},
+    {id: 3, desc: 'One of my Supporters'},
+    {id: 4, desc: 'A Humingbird'},
+    {id: 5, desc: 'Beauty is Only Skin Deep'},
+    {id: 6, desc: 'Relistic Fruits'},
+    {id: 7, desc: 'Camera Girl'},
+    {id: 8, desc: 'Rolling Through the Moutains'},
+    {id: 9, desc: 'Sketch of a Garden'},
+    {id: 10, desc: 'My Cute Dog'},
+    {id: 11, desc: 'My Dog Sticking his Tounge Out'},
+    {id: 12, desc: 'The Flufy coulds in The Midnight'},
+    {id: 13, desc: 'Fealing the Wind'},
+    {id: 14, desc: 'Kirby relazing in a pond'},
+    {id: 15, desc: 'Hermione Granger Making the Polyjuice Potion'},
+    {id: 16, desc: 'Space Drink'},
+    {id: 17, desc: 'Lanterens through the wind'}
   ];
   graphics_8 = [
     {id: 0, desc: 'the world without gravity'},
     {id: 1, desc: 'cookie girl'},
-    {id: 2, desc: 'mommy\'s purse'},
+    {id: 2, desc: 'desiner fasion for mom\'s purse'},
     {id: 3, desc: 'fasion racoon'},
     {id: 4, desc: 'be careful'},
     {id: 5, desc: 'Chritsmas'},
@@ -151,6 +177,12 @@ export default class ArtsService {
     {id: 39, desc: 'my parents'},
     {id: 40, desc: 'Eri'}
   ];
+  graphics_10 = [
+    {id: 0, desc: 'Green girl'},
+    {id: 1, desc: 'Secret Siren Serendading You With Singing'},
+    {id: 2, desc: 'Lunar Girl'},
+    {id: 3, desc: 'A Smiling Girl'}
+  ];
   paintings_8 = [
    {id: 0, desc: 'Chritsmas trees'},
    {id: 1, desc: 'A happy bear'},
@@ -178,6 +210,21 @@ export default class ArtsService {
     {id: 9, desc: 'cats in space'},
     {id: 10, desc: 'yin yang cats'}
    ];
+  paintings_10 = [
+    {id: 0, desc: 'Artistic Flowers'},
+    {id: 1, desc: 'LoLo'},
+    {id: 2, desc: 'Pretty Roses'},
+    {id: 3, desc: 'Ranibow Roses'},
+    {id: 4, desc: 'A Place in China'},
+    {id: 5, desc: 'Splat Into a Plant'},
+    {id: 6, desc: 'Froppy'},
+    {id: 7, desc: 'A Catus in a Teacup'},
+    {id: 8, desc: 'Moon Girl'},
+    {id: 9, desc: 'The Midnight cover with Cats'},
+    {id: 10, desc: 'Hermione Granger'},
+    {id: 11, desc: 'The Pretty Swamp'},
+    {id: 12, desc: 'Snowy Snowman'}
+  ];
   animations_8 = [
     {id: 0, desc: 'flying bird'}
   ];
@@ -195,7 +242,9 @@ export default class ArtsService {
     {id: 10, desc: 'explorer'},
     {id: 11, desc: 'blink blink its me'}
   ];
-
+  animations_10 = [
+    {id: 0, desc: 'Moon Cat'}
+  ];
   constructor() { }
 
   getArts(artType: string, age: string | null = '8'): Array<{id: number, desc: string}>{
